@@ -1,0 +1,413 @@
+Bonjour à tous,
+
+
+
+Nous avons vu ensemble les premières notions des classes 
+
+- les constructeurs : par défaut et plusieurs paramètres et par recopie
+
+- le destructeur 
+
+- les setters et les getters 
+
+- les méthodes afficher et La_distance 
+
+- les fonctions amies "friend"
+
+- la surcharge des opérateurs 
+
+- les attributs et méthodes static.
+
+- les operateurs istream et ostream. 
+
+
+
+Vous devez préparer les 3 exercices suivants avant la deadline sur Moodle. Chaque exercice doit se mettre dans un dossier séparé et envoyez le tout sous format zip.  
+
+Vous devez préparer le chapitre numéro 7 du cours sur l'héritage avant de venir en classe. 
+
+Vous devez comprendre les notions suiantes avant de venir en cours :
+
+
+
+-7- L’héritage 
+
+7.1 L’héritage simple /multiple
+
+7.2 Mode de dérivation 
+
+7.3 Redéfinition de méthodes dans la classe derivée
+
+7.4 Ajustement d’acees
+
+7.5 H´eritage des constructeurs/destructeurs 
+
+7.6 H´eritage et amitié
+
+7.7 Conversion de type dans une hiérarchie de classes 
+
+7.8 H´eritage multiple 
+
+7.9 H´eritage virtuel
+
+7.10 Polymorphisme
+
+7.11 Classes abstraites 
+
+----------------------
+
+Exercice 1 :
+
+-----------------------
+
+
+
+1- En utilisant l'héritage ( simple / multiple ) veuillez terminer toutes les classes : 
+
+_point
+
+_point_3D
+
+_couleur
+
+_point_couleur 
+
+_point_3D_couleur 
+
+
+
+2- terminer le diagramme UML correspondant au probleme en utilisant l'application suivante : 
+
+https://online.visual-paradigm.com/w/qasdusjf/drive/#infoart:proj=0&dashboard
+
+
+
+3- envoyer le programme en sa version finale . cpp + le diagramme UML correspondant. 
+
+   Vous devez avoir fait tous les tests possibles pour valider vos méthodes publiques. 
+
+
+
+-----------------------
+
+Exercice 2 :
+
+-----------------------
+
+Voici le deuxième exercice concernant les classes pour vous entrainer
+
+soit une classe nommée "complexe" 
+
+
+
+cette  classe comportera :
+
+-----------------------
+
+3 attributs privé :
+
+-----------------------
+
+--> double x // pour la partie reelle
+
+--> double y // pour la partie imaginaire pure
+
+--> static int nb // pour le nombre d'objets de type compexe dans le programme principal
+
+-----------------------
+
+Les méthodes  :
+
+-----------------------
+
+complexe() // constructeur 
+
+complexe(double) // constructeur 1 paramètre
+
+complexe(double,double) // constructeur 2 paramètres 
+
+complexe( const complexe & )  // constructeur par recopie
+
+~complexe() // un destructeur 
+
+
+
+set_x(double):void
+
+set_y(double):void
+
+get_x():double
+
+get_y():double
+
+
+
+operator+(const complexe & ) :complexe
+
+operator-(const complexe & ) :complexe
+
+operator*(const complexe & ) :complexe
+
+operator/(const complexe & ) :complexe
+
+
+
+operator+=(const complexe & ) :void
+
+operator-=(const complexe & ) :void
+
+operator*=(const complexe & ) :void
+
+operator/=(const complexe & ) :void
+
+
+
+operator==(const complexe & ) :bool
+
+operator!=(const complexe & ) :bool
+
+
+
+operator+(double) :complexe
+
+operator-(double) :complexe
+
+operator*(double) :complexe
+
+operator/(double) :complexe
+
+
+
+operator+=(double) :void
+
+operator-=(double) :void
+
+operator*=(double) :void
+
+operator/=(double) :void
+
+
+
+friend operator<<(ostream &, const complexe & ) :ostream& 
+
+friend operator>>(istream &,       complexe & ) :istream&
+
+
+
+afficher():void
+
+distance( const complexe & ): double
+
+conjugesœuf: complexe
+
+module(): double
+
+argument(): double
+
+
+
+-----------------------
+
+Questions : 
+
+-----------------------
+
+
+
+Vous devez tester toutes vos méthodes plus haut  avec plusieurs objets en leur  faisant appel dans le programme principal? 
+
+
+
+Toutes  ces méthodes doivent être écrite dans une  bibliothéque contenant les déclarations et la définition de celles ci.  
+
+
+
+N'oubliez pas de m'envoyer les fichiers.h/.cpp et le diagramme UML correspondant. 
+
+
+
+-----------------------
+
+Exercice 3 :
+
+-----------------------
+
+Ici vous allez manipuler plusieurs classes :
+
+- la class date
+
+- la class note
+
+- la class etudiant 
+
+- la class classe 
+
+-----------------------
+
+-- Classe date --------
+
+-----------------------
+
+Soit la classe "date" 
+
+Celle-ci contient les a attributs privé suivants: 
+
+-jour de type entier
+
+-mois dr type entier 
+
+-annee de type entier 
+
+elle possède aussi 7 méthodes publiques  : 
+
+- un constructeur à 3 paramètres 
+
+- un constructeur par recopie. 
+
+- set_jour et get_jour
+
+- set_mois et get_mois
+
+- set_annee et get_annee
+
+- une surcharge de l'operateur << avec une fonction amie.
+
+- une surcharge de l'operateur >> avec une fonction amie. 
+
+ 
+
+
+
+-----------------------
+
+-- Classe note --------
+
+-----------------------
+
+Soit la classe "note" 
+
+Celle-ci contient les 3 attributs privé suivants: 
+
+- matiere : le nom de la matère de type string 
+
+- n : une note de type double entre 0 et 20
+
+- coef : un coefficient de type entier strict sup à zero et strict inferieur à 5 
+
+elle possède aussi 7 méthodes publiques : 
+
+- un constructeur à 3 paramètres 
+
+- un constructeur par recopie. 
+
+- set_matiere et get_matiere 
+
+- set_n et get_n
+
+- set_coef et get_coef
+
+- une surcharge de l'operateur << avec une fonction amie.
+
+- une surcharge de l'operateur >> avec une fonction amie. 
+
+
+
+---------------------------
+
+-- Classe Etudiant --------
+
+---------------------------
+
+Soit une classe Etudiant: 
+
+Celle ci contient les 7 attributs privés suivants : 
+
+- Nom du type string 
+
+- Prenom du type string
+
+- ddn une date de naissance  qui sera un objet du type "date"
+
+- trois notes n1,n2 et n3 qui seront trois objets du type "note" 
+
+- une moyenne du type double
+
+
+
+elle possède aussi les 12 méthodes publiques : 
+
+- un constructeur à 6 paramètres (string ,string,date,note,note,note ) 
+
+- pas de constructeur par recopie. 
+
+- set_nom et get_nom 
+
+- set_prenom et get_prenom
+
+- set_ddn et get_ddn (attention ddn est un objet de la class date)
+
+- set_n1 et get_n1   (attention n1  est un objet de la class note)
+
+- set_n2 et get_n2   (attention n2  est un objet de la class note)
+
+- set_n3 et get_n3   (attention n3  est un objet de la class note)
+
+- set_moyenne et get_moyenne ( moyenne des 3 notes n1,n2,n3)
+
+- une méthode : calcul_moyenne qui calcul la moyenne des 3 notes. 
+
+- une surcharge de l'operateur << avec une fonction amie.
+
+- une surcharge de l'operateur >> avec une fonction amie. 
+
+---> n'oublier pas de bien afficher les coordonnées des étudiants. 
+
+--------------
+
+Questions : 
+
+--------------
+
+1- Créer un objet d du type date et testez toutes les méthodes
+
+   ---> attention la date doit être valide selon le calendrier.
+
+
+
+2- Créer un objet de type note et tester toutes les méthodes 
+
+
+
+3- Créer un objet étudiant  et tester toutes les méthodes 
+
+
+
+4- Faire le diagramme UML correspondant au problème. 
+
+
+
+Soit une classe contenant plusieurs etudiants. 
+
+L'administration cherche a faire la moyenne générale des étudiants de la classe. 
+
+
+
+5- Créez une class "classe" qui permet de resencer la moyenne générale 
+
+et le rang des étudiants de cette classe. 
+
+
+
+6- insérer y tous les attributes et les méthodes que vous voyez intéressantes pour cette question.
+
+    --> un attribut et une méthode statique pour compter les étudiants ici est très intéressante.
+
+ 
+
+7- Créez un objet de cette classe "AERO3_SA_B2" et donner la moyenne générale de ces étudiants ainsi 
+
+que les rang des élèves de cette classe. Attention la classe comporte au maximum 40 élèves.
+
+
+
+8- Rajouter dans le diagramme UML cette classe. 
